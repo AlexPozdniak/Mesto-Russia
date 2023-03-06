@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Четвертый проект Алексея Позднякова от Яндекс Практикум">
+    <meta name="keywords" content="HTML CSS Js">
+    <meta name="author" content="Alex Pozdniakov">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>Mesto Russia</title>
+  </head>
+
+  <body class="page">
+
+      <header class="header">
+        <img src="./images/logo.svg"  class="header__logo" alt="Логотип">
+      </header>
+
+      <main class="content">
+        <section class="profile">
+          <div class="profile__container">
+            <img src="./images/profile-photo.jpg" class="profile__avatar" alt="Фото Жак-Ива Кусто">
+            <div class="profile__info-wrapper">
+              <div class="profile__heading-button-wrapper">
+                <h1 class="profile__heading">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button" type="button">
+                  <img src="./images/edit-icon.svg" class="profile__edit-icon" alt="Профиль">
+                </button>
+              </div>
+              <p class="profile__subheading">Исследователь океана</p>
+            </div>
+          </div>
+          <button class="profile__adding-button" type="button">
+            <img src="./images/add-icon.svg" class="profile__adding-icon" alt="Добавить">
+          </button>
+        </section>
+        <section class="popup">
+          <div class="popup__container">
+            <h2 class="popup__heading">Редактировать профиль</h2>
+            <form  name="form" class="popup__form"> 
+              <input name="input" class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто">
+              <input class="popup__input popup__input_type_job" type="text" value="Исследователь океана">
+              <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+            <button class="popup__close-button" type="button">
+              <img src="./images/close-icon.svg" class="popup__close-icon" alt="Закрыть">
+            </button>
+          </div>
+        </section>
+        <section class="element" aria-label="Карточки с фотографиями">
+          <ul class="element__list">
+            <li class="element__item">
+              <img src="./images/karachaevsk.jpg" class="element__photo" alt="Заброшенная Церковь в Горах">
+              <div class="element__description-container">
+                <h2 class="element__description">Карачаево-Черкессия</h2>
+                <button class="element__like-button" type="button">
+                  <img src="./images/like-icon.svg" class="element__like-icon" alt="Иконка лайка">
+                </button>
+              </div>
+            </li>
+            <li class="element__item">
+              <img src="./images/elbrus.jpg" class="element__photo" alt="Фото возвышение Эльбруса">
+              <div class="element__description-container">
+                <h2 class="element__description">Гора Эльбрус</h2>
+                <button class="element__like-button" type="button">
+                  <img src="./images/like-icon.svg" class="element__like-icon" alt="Иконка лайка">
+                </button>
+              </div>
+            </li>
+            <li class="element__item">
+              <img src="./images/dombai.jpg" class="element__photo" alt="Фото горы Домбая">
+              <div class="element__description-container">
+                <h2 class="element__description">Домбай</h2>
+                <button class="element__like-button" type="button">
+                  <img src="./images/like-icon.svg" class="element__like-icon"  alt="Иконка лайка">
+                </button>
+              </div>
+            </li>
+            <li class="element__item">
+              <img src="./images/elbrus.jpg" class="element__photo" alt="Фото возвышение Эльбруса">
+              <div class="element__description-container">
+                <h2 class="element__description">Гора Эльбрус</h2>
+                <button class="element__like-button" type="button">
+                  <img src="./images/like-icon.svg" class="element__like-icon"  alt="Иконка лайка">
+                </button>
+              </div>
+            </li>
+            <li class="element__item">
+              <img src="./images/dombai.jpg" class="element__photo"  alt="Фото горы Домбая">
+              <div class="element__description-container">
+                <h2 class="element__description">Домбай</h2>
+                <button class="element__like-button" type="button">
+                  <img src="./images/like-icon.svg" class="element__like-icon"  alt="Иконка лайка">
+                </button>
+              </div>
+            </li>
+            <li class="element__item">
+              <img src="./images/karachaevsk.jpg" class="element__photo" alt="Заброшенная Церковь в Горах">
+              <div class="element__description-container">
+                <h2 class="element__description">Карачаево-Черкессия</h2>
+                <button class="element__like-button" type="button">
+                  <img src="./images/like-icon.svg" class="element__like-icon"  alt="Иконка лайка">
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright" >&copy; 2023 Mesto Russia</p>
+      </footer>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
