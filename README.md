@@ -11,6 +11,6 @@
 - VSCode
 - FIGMA
 
-## [Ссылка на проект](https://AlexPozdniak.github.io/mesto-russia/)
+## [Ссылка на проект](https://alexpozdniak.github.io/Mesto-Russia/)
 
 # mesto-russia

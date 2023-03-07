@@ -1,5 +1,5 @@
 @import url("../vendor/normalize.css");
-@import url("../fonts/fonts.css");
+@import url("../styles/inter.css");
 @import url("../blocks/page/page.css");
 @import url("../blocks/element/element.css");
 @import url("../blocks/header/header.css");
@@ -31,7 +31,6 @@
 @import url("../blocks/element/__description-container/element__description-container.css");
 @import url("../blocks/element/__description/element__description.css");
 @import url("../blocks/element/__like-button/element__like-button.css");
-@import url("../blocks/element/__like-icon/element__like-icon.css");
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/footer/__copyright/footer__copyright.css");
 
