@@ -3,12 +3,12 @@
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
-    padding: 0;
     margin: 16px 0 0 0;
     max-width: 336px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    padding: 8px;
   }
   
   @media screen and (max-width: 767px) {

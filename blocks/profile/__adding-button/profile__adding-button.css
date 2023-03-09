@@ -8,11 +8,11 @@
   border: 2px solid #ffffff;
   border-radius: 2px;
   font-size: 0;
-  cursor: pointer;
 }
 
 .profile__adding-button:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -23,8 +23,6 @@
 }
 @media screen and (max-width: 320px) {
   .profile__adding-button {
-    max-width: 282px;
-    margin-top: 36px;
-    padding: 14px 130px;
+    width: 100%;
   }
 }

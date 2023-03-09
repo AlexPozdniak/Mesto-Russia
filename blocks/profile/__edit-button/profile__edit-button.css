@@ -2,13 +2,14 @@
   display: block;
   padding: 7px;
   border: 1px solid #ffffff;
-  max-width: 24px;
-  max-height: 24px;
+  width: 24px;
+  height: 24px;
   box-sizing: border-box;
-  background: transparent; 
+  background: transparent;
   font-size: 0;
   margin-left: 18px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .profile__edit-button:hover {
@@ -19,7 +20,7 @@
     width: 18px;
     height: 18px;
     padding: 2px;
-   
+   margin-top: 8px;
 
   }
 } 
