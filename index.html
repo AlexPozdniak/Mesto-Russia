@@ -12,7 +12,7 @@
 
   <body class="page">
 
-      <header class="header page__header">
+      <header class="header">
         <img src="./images/logo.svg"  class="header__logo" alt="Логотип">
       </header>
 
@@ -23,9 +23,7 @@
             <div class="profile__info-wrapper">
               <div class="profile__heading-button-wrapper">
                 <h1 class="profile__heading">Жак-Ив Кусто</h1>
-                <button class="profile__edit-button" type="button">
-                  <img src="./images/edit-icon.svg" class="profile__edit-icon" alt="Профиль">
-                </button>
+                <button class="profile__edit-button" type="button" alt="Профиль"></button>
               </div>
               <p class="profile__subheading">Исследователь океана</p>
             </div>
@@ -37,15 +35,13 @@
        
         <section class="popup">
           <div class="popup__container">
+            <button class="popup__close-button" type="button" alt="Закрыть"></button>
             <h2 class="popup__heading">Редактировать профиль</h2>
-            <form  name="form" class="popup__form"> 
+            <form class="popup__form" name="form"> 
               <input name="name" class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто">
               <input name="profession" class="popup__input popup__input_type_job" type="text" value="Исследователь океана">
               <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
-            <button class="popup__close-button" type="button">
-              <img src="./images/close-icon.svg" class="popup__close-icon" alt="Закрыть">
-            </button>
           </div>
         </section>
         

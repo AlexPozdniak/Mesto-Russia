@@ -1,6 +1,7 @@
 .content {
-  margin: 20px 0 auto;
-  
+  max-width: 880px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 320px) {

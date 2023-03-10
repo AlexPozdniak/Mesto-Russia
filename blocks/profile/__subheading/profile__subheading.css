@@ -1,22 +1,18 @@
 .profile__subheading {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #ffffff;
-    margin: 16px 0 0 0;
-    max-width: 336px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 8px;
+  width: 294px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 4px 0 0 10px;
+  font-size: 18px;
   }
   
   @media screen and (max-width: 767px) {
     .profile__subheading {
+      width: 189px;
       font-size: 14px;
-      line-height: 17px;
-      text-align: center;
-      margin: 14px 0 0 0;
+      margin: 5px 0 33px 0;
     }
   }
   @media screen and (max-width: 320px) {
