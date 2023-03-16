@@ -1,0 +1,16 @@
+.popup__job {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  margin: 0 0 48px;
+  padding: 0;
+  padding-bottom: 13px;
+}
+
+.popup__job:focus {
+  outline: none;
+}
+
+.popup__job::placeholder {
+  color: #000;
+} 

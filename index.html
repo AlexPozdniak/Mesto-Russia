@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Четвертый проект Алексея Позднякова от Яндекс Практикум">
+    <meta name="keywords" content="HTML CSS Js">
+    <meta name="author" content="Alex Pozdniakov">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>Mesto Russia</title>
+</head>
+<body class="page">
+  <div class="page__container">
+    <header class="header">
+      <img class="header__logo" alt="Логотип" src="./images/logo.svg">
+      <div class="header__lines">
+      </div>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <img class="profile__avatar" src="./images/profile-photo.jpg" alt="Фото Жак-Ива Кусто">
+        <div class="profile__info">
+          <h1 id="profile__name" class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button" aria-label="Редактировать"></button>
+          <p id="profile__job" class="profile__job">Исследователь океана</p>
+        </div>
+        <button class="profile__add-button" aria-label="Добавить"></button>
+      </section>
+      <section class="elements">
+        <ul class="elements__list">
+          <li class="elements__list-item">
+            <img src="./images/firework.jpg" class="elements__picture" alt="фейерверк">
+            <div class="elements__container">
+              <h2  class="elements__text">Fireworks</h2 >
+              <button class="elements__icon" type="button"></button>
+            </div>
+          </li>
+          <li class="elements__list-item">
+            <img src="./images/relax.jpg" class="elements__picture" alt="релакс">
+            <div class="elements__container">
+              <h2 class="elements__text">Relax Time</h2 >
+              <button class="elements__icon" type="button"></button>
+            </div>
+          </li>
+          <li class="elements__list-item">
+            <img src="./images/snow.jpg" class="elements__picture" alt="Сноубординг"> <!-- Не получилось оптимизировать, слишком большой размер на сайте https://tinypng.com/-->
+            <div class="elements__container">
+              <h2 class="elements__text">Snowboarding Forever</h2 >
+              <button class="elements__icon" type="button"></button>
+            </div>
+          </li>
+          <li class="elements__list-item">
+            <img src="./images/dombai.jpg" class="elements__picture" alt="Домбай">
+            <div class="elements__container">
+              <h2 class="elements__text">Домбай</h2 >
+              <button class="elements__icon" type="button"></button>
+            </div>
+          </li>
+          <li class="elements__list-item">
+            <img src="./images/elbrus.jpg" class="elements__picture" alt="Гора Эльбруса">
+            <div class="elements__container">
+              <h2 class="elements__text">Гора Эльбруса</h2 >
+              <button class="elements__icon" type="button"></button>
+            </div>
+          </li>
+          <li class="elements__list-item">
+            <img src="./images/karachaevsk.jpg" class="elements__picture" alt="Карачаевск">
+            <div class="elements__container">
+              <h2 class="elements__text">Карачаевск</h2 >
+              <button class="elements__icon" type="button"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__author">&copy; 2023 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+      <form class="popup__container">
+        <p class="popup__title">Редактировать профиль</p>
+          <input class="popup__name" type="text">
+          <input class="popup__job" type="text">
+        <button type="submit" class="popup__save-button">Сохранить</button>
+        <button type="button" class="popup__close-button"></button>
+      </form>
+    </div>
+  </div>
+<script src="sripts/sript.js"></script>
+</body>
+</html>
