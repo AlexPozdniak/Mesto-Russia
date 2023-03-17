@@ -6,8 +6,11 @@
 
 @media screen and (max-width: 767px) {
 .profile__info {
-    gap: 14px 15.25px;
-    margin-top: 26px;
+    gap: 3px 1.25px;
+    margin-top: 29px;
+    left: 45px;
+    bottom: 19px;
     position: relative;
+    text-align: center;
 }
 }

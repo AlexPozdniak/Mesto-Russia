@@ -5,7 +5,7 @@
   padding: 0;
   background-image: url(../../../images/like-icon.svg);
   background-size: 100%;
-  background-color: #FFFFFF;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 1;
@@ -13,7 +13,7 @@
 }
 
 .elements__icon:hover {
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .elements__icon:active  {

@@ -2,10 +2,10 @@
   max-width: 430px;
   width: 100%;
   border-radius: 10px;
-  padding: 34px 36px 36px;
+  padding: 52px 37px 39px;
   box-sizing: border-box;
   position: relative;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767px) {

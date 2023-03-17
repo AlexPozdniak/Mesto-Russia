@@ -13,18 +13,16 @@
   <div class="page__container">
     <header class="header">
       <img class="header__logo" alt="Логотип" src="./images/logo.svg">
-      <div class="header__lines">
-      </div>
     </header>
     <main class="content">
       <section class="profile">
         <img class="profile__avatar" src="./images/profile-photo.jpg" alt="Фото Жак-Ива Кусто">
         <div class="profile__info">
           <h1 id="profile__name" class="profile__name">Жак-Ив Кусто</h1>
-          <button class="profile__edit-button" aria-label="Редактировать"></button>
+          <button class="profile__edit-button" type="submit" aria-label="Редактировать"></button>
           <p id="profile__job" class="profile__job">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" aria-label="Добавить"></button>
+        <button class="profile__add-button" type="submit" aria-label="Добавить"></button>
       </section>
       <section class="elements">
         <ul class="elements__list">
@@ -77,10 +75,11 @@
       <p class="footer__author">&copy; 2023 Mesto Russia</p>
     </footer>
     <div class="popup">
-      <form class="popup__container">
-        <p class="popup__title">Редактировать профиль</p>
-          <input class="popup__name" type="text">
-          <input class="popup__job" type="text">
+      <div class="popup__container">
+        <form class="popup__form" name="profile-form">
+        <h3 class="popup__title">Редактировать профиль</h3>
+          <input name="name" class="popup__input popup__input_type_name" type="text">
+          <input name="job" class="popup__input popup__input_type_job" type="text">
         <button type="submit" class="popup__save-button">Сохранить</button>
         <button type="button" class="popup__close-button"></button>
       </form>

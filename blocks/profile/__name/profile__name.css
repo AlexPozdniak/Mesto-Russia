@@ -1,9 +1,8 @@
 .profile__name {
   max-width: 336px;
-  word-wrap: break-word;
   font-weight: 500;
   font-size: 42px;
-  line-height: 1.33;
+  line-height: 16.94px;
   color: #fff;
   margin: 0 0 16px;
   text-overflow: ellipsis;
@@ -20,7 +19,7 @@
 @media screen and (max-width: 767px) {
   .profile__name {
     font-size: 27px;
-    line-height: 56px;
-    max-width: 189px;
+    line-height: 32.68px;
+    max-width: 192px;
   }
 }
