@@ -4,7 +4,7 @@
   font-size: 18px;
   line-height: 22px;
   color: #fff;
-  margin: 0 auto;
+  margin: 0px 0px 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -20,9 +20,12 @@
 @media screen and (max-width: 767px) {
   .profile__job{
     font-size: 14px;
-    height: 14px;
     line-height: 17px;
-    line-height: 100%;
-    max-width: 205px;
+    max-width: 292px;
+    text-overflow: revert;
+    margin-right: 18px;
+    margin-left: 62px;
+    margin-bottom: 14px;
+    margin-top: 0px;
   }
 }
