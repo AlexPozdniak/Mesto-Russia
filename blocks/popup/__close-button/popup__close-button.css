@@ -12,7 +12,6 @@
   right: -40px;
   transition: all .1s linear;
   cursor: pointer;
-  background-color: transparent;
 }
 
 .popup__close-button:focus {
