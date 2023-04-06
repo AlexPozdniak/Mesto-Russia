@@ -25,65 +25,56 @@
         <button class="profile__add-button" type="button" aria-label="Добавить"></button>
       </section>
       <section class="elements">
-        <ul class="elements__list">
-          <li class="elements__list-item">
-            <img src="./images/firework.jpg" class="elements__picture" alt="фейерверк">
-            <div class="elements__container">
-              <h2  class="elements__text">Fireworks</h2 >
-              <button class="elements__icon" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img src="./images/relax.jpg" class="elements__picture" alt="релакс">
-            <div class="elements__container">
-              <h2 class="elements__text">Relax Time</h2 >
-              <button class="elements__icon" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img src="./images/snow.jpg" class="elements__picture" alt="Сноубординг"> <!-- Не получилось оптимизировать, слишком большой размер на сайте https://tinypng.com/-->
-            <div class="elements__container">
-              <h2 class="elements__text">Snowboarding Forever</h2 >
-              <button class="elements__icon" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img src="./images/dombai.jpg" class="elements__picture" alt="Домбай">
-            <div class="elements__container">
-              <h2 class="elements__text">Домбай</h2 >
-              <button class="elements__icon" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img src="./images/elbrus.jpg" class="elements__picture" alt="Гора Эльбруса">
-            <div class="elements__container">
-              <h2 class="elements__text">Гора Эльбруса</h2 >
-              <button class="elements__icon" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img src="./images/karachaevsk.jpg" class="elements__picture" alt="Карачаевск">
-            <div class="elements__container">
-              <h2 class="elements__text">Карачаевск</h2 >
-              <button class="elements__icon" type="button"></button>
-            </div>
-          </li>
+        <ul class="elements-list">
+          <template class="elements__list">
+              <li class="elements__list-item">
+                <button class="elements__trash" type="button"></button>
+                <img src="" class="elements__picture" alt="">
+                <div class="elements__container">
+                  <h2  class="elements__text"></h2 >
+                  <button class="elements__icon" type="button"></button>
+                </div>
+              </li>
+          </template>
         </ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__author">&copy; 2023 Mesto Russia</p>
     </footer>
-    <div class="popup">
+
+    <div class="popup popup_type_profile">
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form" name="form">
-          <input class="popup__input popup__input_type_name" type="text" name="name">
-          <input class="popup__input popup__input_type_job" type="text" name="job">
+        <form class="popup__form" id="edit-form" name="form">
+          <input class="popup__input popup__input_type_title" type="text" name="title" placeholder="Имя">
+          <input class="popup__input popup__input_type_job" type="text" name="job" placeholder="Профессия">
         <button type="submit" class="popup__save-button">Сохранить</button>
       </form>
-      <button type="button" class="popup__close-button" aria-label="Закрыть"></button>
+        <button id="edit-close" type="button" class="popup__close-button" aria-label="Закрыть"></button>
+      </div>
     </div>
+
+    <div class="popup popup_type_add-card">
+    <div class="popup__container">
+      <h3 class="popup__title">Новое место</h3>
+      <form class="popup__form" id="add-form" name="form">
+        <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Название">
+        <input class="popup__input popup__input_type_link" type="text" name="link" placeholder="Ссылка на картинку">
+        <button type="submit" class="popup__save-button">Создать</button>
+      </form>
+      <button id="add-close" type="button" class="popup__close-button" aria-label="Закрыть"></button>
+  </div>
+    </div>
+
+    <div class="popup popup_type_preview-card">
+      <div class="popup__preview-container">
+        <button id="preview-close" type="button" class="popup__close-button" aria-label="Закрыть"></button>
+        <img class="popup__image" src="" alt="">
+        <div class="popup__text"></div>
+      </div>
+    </div>
+
   </div>
 <script src="sripts/sript.js"></script>
 </body>

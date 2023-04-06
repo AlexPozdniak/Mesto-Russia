@@ -5,13 +5,13 @@
   color: #000;
   align-self: flex-start;
   margin: 1px;
-  margin-bottom: 68px;
+  margin-bottom: 65px;
 }
 
 @media screen and (max-width: 770px){
 .popup__title {
     margin: 24px 1px 37px;
-    font-size: 186px;
+    font-size: 18px;
     line-height: 22px;
 }
 }
@@ -19,7 +19,6 @@
 @media screen and (max-width: 426px) {
   .popup__title {
     margin: 0px 0px 40px;
-    font-size: 18px;
     line-height: 25px;
     max-width: 238px;
 }

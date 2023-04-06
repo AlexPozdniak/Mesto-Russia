@@ -2,9 +2,9 @@
   max-width: 336px;
   font-weight: 500;
   font-size: 42px;
-  line-height: 39px;
+  line-height: 1.14;
   color: #fff;
-  margin: 8px 0 16px;
+  margin: 8px 0 7px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -20,6 +20,10 @@
   .profile__name {
     font-size: 27px;
     line-height: 33px;
-    max-width: 192px;
+    max-width: 199px;
+    margin-right: 0;
+    margin-left: 36px;
+    margin-bottom: 4px;
+    margin-top: 0px;
   }
 }

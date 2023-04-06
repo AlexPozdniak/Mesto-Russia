@@ -1,15 +1,6 @@
 .popup_opened {
   display: flex;
-  width: 430px;
-  height: 335px;
-  padding: 195px;
-}
-
-
-@media screen and (max-width: 426px) {
-.popup_opened {
-width: 282px;
-height: 322px;
-padding-top: 123px;
-}
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in;
 }
