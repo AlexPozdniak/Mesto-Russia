@@ -76,7 +76,6 @@ editButton.addEventListener('click', () => {
 });
 // Открытие попапа Добавление карточки
 addCardButton.addEventListener('click', () => {
-  console.log('123')
   openPopup(addCardPopup)
 })
 
@@ -87,8 +86,8 @@ previewCardCloseButton.addEventListener('click', () => closePopup(previewCardPop
 // submit формы Профиля
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
-  name.textContent = titleInput.value;
-  job.textContent = jobInput.value;
+  profileName.textContent = titleInput.value;
+  profileJob.textContent = jobInput.value;
   closePopup(profilePopup);
 }
 
@@ -99,6 +98,8 @@ function handleAddCardFormSubmit(evt) {
     name: nameInput.value,
     link: linkInput.value
   }
+  nameInput.value=""
+  linkInput.value=""
   renderCard(newCard)
   closePopup(addCardPopup);
 }
