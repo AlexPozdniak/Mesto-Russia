@@ -1,3 +1,4 @@
+
 // Формы
 const editForm = document.getElementById('edit-form');
 const addCardForm = document.getElementById('add-form');
@@ -5,6 +6,7 @@ const addCardForm = document.getElementById('add-form');
 const profilePopup = document.querySelector('.popup_type_profile');
 const addCardPopup = document.querySelector('.popup_type_add-card');
 const previewCardPopup = document.querySelector('.popup_type_preview-card');
+const closeButtons = document.querySelectorAll('.popup__close-button');
 // X
 const profileCloseButton = document.getElementById('edit-close')
 const addCardCloseButton = document.getElementById('add-close')
@@ -35,8 +37,8 @@ const cardTemplate = cardList.content.querySelector('.elements__list-item')
 
 const initialCards = [
   {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    name: 'Relax Time',
+    link: 'https://images.unsplash.com/photo-1639224197881-c835df14ed26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
   },
   {
     name: 'Челябинская область',
@@ -62,20 +64,46 @@ const initialCards = [
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', popupCloseByEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.addEventListener('keydown', popupCloseByEscape);
 }
+
+closeButtons.forEach(item => {
+  const closeForms = item.closest('.popup');
+  item.addEventListener('click', () => closePopup(closeForms));
+  //закрытие модалок по оверлею
+  closeForms.addEventListener('mousedown', (evt) => {
+    if (evt.target === evt.currentTarget) {
+      closePopup(evt.currentTarget);
+    }
+  });
+});
+
+
+function popupCloseByEscape(evt) {
+  if (evt.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened')
+    closePopup(popupOpened)
+  }
+};
 
 // Открытие попапа Профиля
 editButton.addEventListener('click', () => {
+  clearInputsError(profilePopup)
   openPopup(profilePopup)
   titleInput.value = profileName.textContent
   jobInput.value = profileJob.textContent
 });
+
 // Открытие попапа Добавление карточки
 addCardButton.addEventListener('click', () => {
+  nameInput.value=""
+  linkInput.value=""
+  clearInputsError(addCardPopup)
   openPopup(addCardPopup)
 })
 
@@ -83,23 +111,33 @@ addCardButton.addEventListener('click', () => {
 profileCloseButton.addEventListener('click', () => closePopup(profilePopup));
 addCardCloseButton.addEventListener('click', () => closePopup(addCardPopup));
 previewCardCloseButton.addEventListener('click', () => closePopup(previewCardPopup));
+
+
 // submit формы Профиля
 function handleEditFormSubmit(evt) {
-  evt.preventDefault();
+
   profileName.textContent = titleInput.value;
   profileJob.textContent = jobInput.value;
   closePopup(profilePopup);
 }
 
+function clearInputsError(popup) {
+  const inputs = Array.from(popup.querySelectorAll(config.inputSelector))
+
+  inputs.forEach((input) => {
+    const errorElement = popup.querySelector(`${config.errorElement}-${input.id}`)
+    hideErrorText(errorElement, config)
+  })
+}
+
 // submit формы Добавления карточки
 function handleAddCardFormSubmit(evt) {
-  evt.preventDefault()
+
   const newCard = {
     name: nameInput.value,
     link: linkInput.value
   }
-  nameInput.value=""
-  linkInput.value=""
+
   renderCard(newCard)
   closePopup(addCardPopup);
 }
