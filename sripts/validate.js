@@ -20,14 +20,12 @@ function showErrorText(errorElement, config, input) {
 
 // Скрываем ошибку
 function hideErrorText(errorElement, config) {
-  console.log(errorElement)
   errorElement.textContent = ''
   errorElement.classList.remove(config.errorClass)
 }
 
 // Проверяем все инпуты на валидность. Вернёт true если хотя бы один инпут невалиден
 function isInputsInvalid(inputs) {
-  console.log('isInputsInvalid', inputs)
   return inputs.some((input) => !input.validity.valid)
 }
 
@@ -46,10 +44,8 @@ function setButtonEnabled(button, config) {
 // Состояние кнопки
 function toggleButtonState(button, inputs, config) {
   if (isInputsInvalid(inputs)) { // Если хотя бы 1 инпут невалиден
-    console.log('инпуты невалидны')
     setButtonDisabled(button, config)
   } else {
-    console.log('инпуты валидны')
     setButtonEnabled(button, config)
   }
 }

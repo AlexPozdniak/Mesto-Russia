@@ -69,14 +69,14 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  document.addEventListener('keydown', popupCloseByEscape);
+  document.removeEventListener('keydown', popupCloseByEscape);
 }
 
 closeButtons.forEach(item => {
-  const closeForms = item.closest('.popup');
-  item.addEventListener('click', () => closePopup(closeForms));
+  const closestPopup = item.closest('.popup');
+  item.addEventListener('click', () => closePopup(closestPopup));
   //закрытие модалок по оверлею
-  closeForms.addEventListener('mousedown', (evt) => {
+  closestPopup.addEventListener('mousedown', (evt) => {
     if (evt.target === evt.currentTarget) {
       closePopup(evt.currentTarget);
     }
@@ -101,17 +101,14 @@ editButton.addEventListener('click', () => {
 
 // Открытие попапа Добавление карточки
 addCardButton.addEventListener('click', () => {
-  nameInput.value=""
-  linkInput.value=""
+  addCardForm.reset()
   clearInputsError(addCardPopup)
   openPopup(addCardPopup)
+  const button = addCardForm.querySelector(config.submitButtonSelector)
+  const inputs = Array.from(addCardForm.querySelectorAll(config.inputSelector))
+  toggleButtonState(button, inputs, config)
+
 })
-
-// закрытие попапа Профиля по Х
-profileCloseButton.addEventListener('click', () => closePopup(profilePopup));
-addCardCloseButton.addEventListener('click', () => closePopup(addCardPopup));
-previewCardCloseButton.addEventListener('click', () => closePopup(previewCardPopup));
-
 
 // submit формы Профиля
 function handleEditFormSubmit(evt) {
