@@ -1,9 +1,9 @@
-.elements__icon {
+.elements__icon-active {
   width: 22px;
   height: 31px;
   border: none;
   padding: 0;
-  background-image: url(../../../images/like-icon.svg);
+  background-image: url(../../../../images/like-active.svg);
   background-size: 100%;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -11,13 +11,3 @@
   opacity: 1;
   transition: opacity 0.5s linear;
 }
-
-.elements__icon:hover {
-  opacity: 0.5;
-}
-
-/* .elements__icon:active  {
-  fill: #000;
-  opacity: 1;
-} */
-
