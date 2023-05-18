@@ -1,5 +1,5 @@
 export class Card {
-  constructor(card, cardSelector) {
+  constructor(card, cardSelector,) {
     this.cardname = card.name
     this.cardlink = card.link
     this.cardSelector = cardSelector
@@ -28,15 +28,19 @@ export class Card {
   }
 
   _like() {
-
+    const likeElement = this.card.querySelector('.elements__icon')
+    likeElement.classList.toggle('elements__icon-active')
   }
 
   _delete() {
-
+    this.card.remove()
   }
 
   _prewecard() {
-
+    this.openPopup(this.previewCardPopup)
+    previewPopupImage.src = this.card.link
+    previewPopupImage.alt = this.card.name
+    previewPopupText.textContent = this.card.name
   }
 
   // Отрисовка наполенной карточки
